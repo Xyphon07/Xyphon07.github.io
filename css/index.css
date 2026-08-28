@@ -1,0 +1,17 @@
+body{
+height:100%;
+width:100%;
+background-image: linear-gradient(135deg in oklab, #E0DEE0 0%, #0ad1ef 100%);
+overflow:hidden;
+}
+#main{
+position:absolute;
+height:90%;
+width:70%;
+top:10%;
+left:15%;
+background-color:#E1C97C;
+border-radius:25px 25px 0 0;
+box-shadow: #D5BD8B 0px 1px 70px, #D5BD8B 0px 0px 0px 5px;
+
+}
