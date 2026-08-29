@@ -8,6 +8,8 @@ overflow:hidden;
 position: absolute;
   height: 90%;
   width: 70%;
+z-index:100000;
+
   top: 10%;
   left: 15%;
   background-color: #E1C97C;
@@ -20,16 +22,24 @@ height: 10vw;
   width: 10vw;
   left: 30vw;
   position: relative;
-}
+  }
 #main > li{
 display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
 }
 #main >li>ul{
-border-left: black solid 24px;
 }
 a{
 text-decoration:none;
 
 }
+ #bubbleCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }

@@ -1,0 +1,357 @@
+:root {
+    --width_mid: 100%;
+    --height_mid: 100%;
+    --distance-travle: 5vh;
+
+}
+
+html {
+    min-height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    z-index: -1;
+    overflow: hidden;
+    background: linear-gradient(175deg,
+            #f7fa48,
+            #d93a32,
+            #aa2222,
+            #0d32ac,
+            #17a65a,
+            #b01178,
+            #b59608);
+    animation: animation-change-color 12s linear infinite;
+
+}
+
+@keyframes animation-change-color {
+    0% {
+        background: linear-gradient(175deg,
+                #f7fa48,
+                #d93a32,
+                #aa2222,
+                #0d32ac,
+                #17a65a,
+                #b01178,
+                #b59608);
+    }
+
+    20% {
+        background: linear-gradient(177deg,
+                #03002e,
+                #010048,
+                #010057,
+                #02006c,
+                #090088);
+    }
+
+    40% {
+        background: linear-gradient(0deg,
+                #ff0000,
+                #bf0000,
+                #800000,
+                #400000,
+                #000000);
+    }
+
+    60% {
+        background: linear-gradient(0deg,
+                #0eff00,
+                #1fc600,
+                #089000,
+                #0a5d00,
+                #063b00);
+    }
+
+    80% {
+        background: linear-gradient(0deg,
+                #ab00ff,
+                #8300c4,
+                #4c00a4,
+                #33007b,
+                #31004a);
+    }
+
+    100% {
+        background: linear-gradient(375deg,
+                #f7fa48,
+                #d93a32,
+                #aa2222,
+                #0d32ac,
+                #17a65a,
+                #b01178,
+                #b59608);
+    }
+}
+
+#new {
+    position: absolute;
+    height: var(--height_mid);
+    width: var(--width_mid);
+    background-color: black;
+    transform: rotate(-25deg) skew(40deg);
+    z-index: -10000;
+    left: calc(-70vw - 7px);
+    top: calc(17% - 17px);
+    border-radius: 25%;
+    overflow: hidden;
+
+}
+
+#new2 {
+    position: absolute;
+    height: var(--height_mid);
+    width: var(--width_mid);
+    background-color: black;
+    transform: rotate(25deg) skew(-40deg);
+    z-index: -10000;
+    right: calc(-70vw - 7px);
+    top: calc(17% - 17px);
+    border-radius: 25%;
+    overflow: hidden;
+}
+
+.background {
+    position: absolute;
+    background: black;
+    z-index: -20000000000;
+    height: calc(17vh + 10px);
+    width: calc(30vw + 70px);
+    left: 30vw;
+    top: calc(40vh - 20px);
+}
+
+.background::after {
+    content: "";
+    position: absolute;
+    left: 80%;
+    top: 0%;
+    z-index: 00;
+    height: 100%;
+    width: 40%;
+    background-color: black;
+}
+
+.background::before {
+    content: "";
+    position: absolute;
+    left: calc(17vw - 1px);
+    top: 20%;
+    height: calc(10vh + 5px);
+    width: calc(10vh + 5px);
+    background-color: white;
+
+    border-radius: 50%;
+}
+
+#holder {
+    position: relative;
+    left: calc(17vw + 1px);
+    top: 20%;
+    display: none;
+}
+
+.canvas {
+    position: absolute;
+    height: calc(10vh + 5px);
+    width: calc(10vh + 5px);
+    left: calc(17vw - 1px);
+    top: 20%;
+    z-index: 1;
+    border-radius: 50%;
+}
+
+.canvas>img {
+    position: absolute;
+    height: calc(10vh + 5px);
+    width: calc(10vh + 5px);
+    z-index: 4;
+    border-radius: 50%;
+}
+
+ul {
+    list-style: none;
+    position: relative;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left: calc(17vw + 1px);
+    top: 0%;
+}
+
+li {
+    position: fixed;
+    left: 110vw;
+    top: 85vh;
+    height: calc(7vh + 7px);
+    width: calc(10vh + 7px);
+    font-weight: 700;
+    font-size: calc(1vh + 2px);
+    text-align: center;
+    transition: 1s;
+    opacity: 0;
+    transform: rotatex(50deg);
+    background-color: transparent;
+   background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 0 0px 0px rgba(255, 255, 255, 0);
+
+  overflow: hidden;
+
+}
+
+li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.8),
+    transparent
+  );
+}
+
+li::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.8),
+    transparent,
+    rgba(255, 255, 255, 0.3)
+  );
+}
+a {
+  color: #FFFFFF;
+    text-decoration: none;
+}
+
+
+#holder:checked~ul>li {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#holder:checked~ul>li:nth-child(1) {
+    position: absolute;
+    top: 50vh;
+    opacity: 100;
+    left: 0vw;
+    animation: ani1 1s forwards;
+}
+
+@keyframes ani1 {
+
+    0%,
+    100% {
+        left: 25vw;
+    }
+
+    50% {
+        left: 2vw;
+        top: 20vh;
+    }
+}
+
+#holder:checked~ul>li:nth-child(2) {
+    position: absolute;
+    top: 50vh;
+    opacity: 100;
+    left: 0vw;
+    animation: ani2 1s forwards;
+}
+
+@keyframes ani2 {
+
+    0%,
+    100% {
+        left: 15vw;
+    }
+
+    50% {
+        left: 2vw;
+        top: 20vh;
+    }
+}
+
+#holder:checked~ul>li:nth-child(3) {
+    position: absolute;
+    top: 50vh;
+    opacity: 100;
+    left: 0vw;
+    animation: ani3 1s forwards;
+
+}
+
+@keyframes ani3 {
+
+    0%,
+    100% {
+        left: 5vw;
+    }
+
+    50% {
+        left: 2vw;
+        top: 20vh;
+    }
+}
+
+#holder:checked~ul>li:nth-child(4) {
+    position: absolute;
+    top: 50vh;
+    opacity: 100;
+    left: 0vw;
+    animation: ani4 1s forwards;
+
+}
+
+@keyframes ani4 {
+
+    0%,
+    100% {
+        left: -5vw;
+    }
+
+    50% {
+        left: 2vw;
+        top: 20vh;
+    }
+}
+
+#holder:checked~ul>li:nth-child(5) {
+    position: absolute;
+    top: 50vh;
+    opacity: 100;
+    left: 0vw;
+    animation: ani5 1s forwards;
+
+}
+
+@keyframes ani5 {
+
+    0%,
+    100% {
+        left: -15vw;
+    }
+
+    50% {
+        left: 2vw;
+        top: 20vh;
+    }
+}

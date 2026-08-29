@@ -1,0 +1,178 @@
+ html,
+        body {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: -2;
+            background-color: black;
+        }
+
+        #r {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color:black;
+            height: 96%;
+            width: 95%;
+            z-index: -1;
+            overflow:hidden ;
+            border-radius: 50px;
+
+        }
+
+        #r:before {
+            content: '';
+            position: fixed;
+            top: 3%;
+            left: 3%;
+            bottom: 2.9%;
+            right: 3%;
+            border-radius: 50px;
+            background: fixed;
+            background-color: black;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+
+        }
+
+        #r>span:nth-child(1) {
+            height: 270%;
+            width: 40%;
+            background: linear-gradient(45deg, magenta, crimson, yellow, indigo, orange, blue, red);
+            animation: aniam 9s linear infinite;
+
+        }
+
+        @keyframes aniam {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+
+        #face {
+           
+            position: fixed;
+            background: cyan;
+            height: 87%;
+            width: 87%;
+            border-radius: 34px;
+            transform-style: preserve-3d;
+            box-shadow: -2px -4px 0 7px turquoise;
+            z-index: 2;
+            overflow-y:scroll;
+            overflow-x:scroll;
+            
+            animation: animate 2s linear infinite;
+            box-sizing: border-box;
+            list-style: none;
+            /* display: flex;
+            align-items: center;
+            justify-content: center; */
+            text-decoration: none;
+            }
+
+        @keyframes animate {
+
+            0%,
+            100% {
+                height: 85%;
+                width: 85%;
+                box-shadow: -2px -4px 0 7px turquoise;
+            }
+
+            50% {
+                height: 87%;
+                width: 87%;
+                box-shadow: -2px -4px 0 7px turquoise;
+            }
+        }
+
+
+        .top {
+            height: 10%;
+            width: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            display: flex;
+            border-bottom: 2px solid black;
+        }
+
+
+        .top>a {
+
+            margin-left: 5px;
+
+            background: transparent;
+            transition-duration: 2s;
+            border-radius: 50px;
+            box-sizing: border-box;
+            font-size: inherit;
+            height: 62%;
+            display: flex;
+            width: 6%;
+            text-decoration: none;
+            color: white;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            right: -78%;
+            top: 24%;
+
+            overflow: hidden;
+            text-decoration: none;
+
+        }
+
+
+        .top>a:before {
+            content: '';
+            z-index: -1;
+            position: absolute;
+            top: -100px;
+            left: -419px;
+            bottom: -100px;
+            right: -419px;
+
+            background: linear-gradient(45deg, yellow, blue 50%);
+            animation: to 2s linear infinite;
+
+        }
+
+        @keyframes to {
+
+            0%,
+            100% {
+                transform: translate(20%);
+            }
+
+            50% {
+                transform: translate(40%);
+
+            }
+        }
+
+
+
+       #face>.shr {
+
+            position:absolute;
+            top: 4rem;
+            font-size: inherit;
+            font-style: oblique;
+            color: crimson;
+                  }
