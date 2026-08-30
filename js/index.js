@@ -59,7 +59,7 @@
     }
 
     // Initialize bubble array
-    const bubbleCount = 75; // Adjust density here
+    const bubbleCount = 70; // Adjust density here
     const bubbleArray = [];
     for (let i = 0; i < bubbleCount; i++) {
       bubbleArray.push(new Bubble());
@@ -79,3 +79,45 @@
 
     animate();
   
+function createMusicWave(containerId, barCount = 20) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+
+  // Clear any existing content
+  container.innerHTML = '';
+
+  for (let i = 0; i < barCount; i++) {
+    const bar = document.createElement('span');
+    bar.classList.add('wave-bar');
+
+    const duration = (0.5 + Math.random() * 0.5).toFixed(2); // between 0.5s and 1.0s
+    const delay = (Math.random() * 0.5).toFixed(2);         // between 0s and 0.5s
+
+    bar.style.animationDuration = `${duration}s`;
+    bar.style.animationDelay = `-${delay}s`; // Negative delay starts animation instantly
+
+    container.appendChild(bar);
+  }
+}
+const num_of_bars=(window.innerWidth*0.7)/6;
+createMusicWave('music-wave-container', num_of_bars);
+const audio = document.getElementById('music');
+const button_audio = document.getElementById('audio_button');
+const audio_div= document.getElementById('music-wave-container');
+let click_count=0;
+ button_audio.addEventListener('click', () => {
+         click_count++;
+ 
+    if (click_count === 1) {
+       audio.volume=1;
+     audio.play();
+        audio_div.style.display='flex';
+        button_audio.textContent="STOP MUSIC";
+    } else if (click_count === 2) {
+       audio.volume=0;
+     audio.pause();
+        button_audio.textContent="PLAY MUSIC";
+click_count = 0;
+  audio_div.style.display='none';
+    } 
+ });

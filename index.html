@@ -11,15 +11,28 @@
      <canvas id="bubbleCanvas"></canvas>
     <div id="main"> 
         <img src="images/me.png">
-        <hr>
         <li>
             <ul><a href="about.html">ABOUT ME</a></ul>
  <ul><a href="blog.html">BLOGS</a></ul>
   <ul><a href="project.html">PROJECTS</a></ul> 
           <ul><a href="stuff.html">STUFF</a></ul>
+  <ul><a href="stuff.html">CONTACTS </a></ul>
+
   </li>
-  <hr>
-  <center> <h1> HI THERE WELCOME TO MY WEBSITE ITS CURRENTLY NOT FINISHED
+  <center> <h1> HI THERE WELCOME TO MY WEBSITE</h1>
+      <p> Since you are here why not listen to music while you check thing out</p>
+<button type="button" id="audio_button">PLAY MUSIC</button>
+
+  </center>
+  <br>
+  
+  <section id="audio-playing-field"  > 
+      <audio controls autoplay loop id="music">
+
+            <source src="music/test.wav" type="audio/wav">
+               </audio> 
+                   <div id="music-wave-container"></div>
+ </section>
 </div>    
     <script src="js/index.js"></script>
 </body>
