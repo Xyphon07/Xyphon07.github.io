@@ -1,6 +1,19 @@
    const canvas = document.getElementById('bubbleCanvas');
     const ctx = canvas.getContext('2d');
-
+const toggle_check = document.getElementById('toggle');
+let color_bubble=[];
+function check_color(){
+        if(toggle_check.checked){
+             color_bubble[0] = 0;
+    color_bubble[1] = 0;
+    color_bubble[2] = 0;
+        }else{
+ color_bubble[0] = 255;
+    color_bubble[1] = 255;
+    color_bubble[2] = 255;
+        }}
+toggle_check.addEventListener('change',() => {check_color();});
+check_color();
     // Resize canvas to fill the screen dynamically
     function resizeCanvas() {
       canvas.width = window.innerWidth;
@@ -38,7 +51,7 @@
           this.reset();
         }
       }
-
+        //color change eval
       draw() {
         ctx.beginPath();
         // Create a radial gradient to give bubbles a realistic, glossy 3D look
@@ -46,12 +59,11 @@
           this.x - this.radius * 0.3, this.y - this.radius * 0.3, this.radius * 0.1,
           this.x, this.y, this.radius
         );
-        
-        gradient.addColorStop(0, `rgba(255, 255, 255, ${this.opacity + 0.4})`);
-        gradient.addColorStop(0.6, `rgba(255, 255, 255, ${this.opacity * 0.2})`);
-        gradient.addColorStop(1, `rgba(255, 255, 255, 0)`);
+          gradient.addColorStop(0, `rgba(${color_bubble.join(',')}, ${this.opacity + 0.4})`);
+    gradient.addColorStop(0.6, `rgba(${color_bubble.join(',')}, ${this.opacity * 0.2})`);
+    gradient.addColorStop(1, `rgba(${color_bubble.join(',')}, 0)`);
 
-        ctx.fillStyle = gradient;
+               ctx.fillStyle = gradient;
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
         ctx.fill();
         ctx.closePath();

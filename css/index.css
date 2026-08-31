@@ -1,8 +1,44 @@
+:root {
+    /**background color light**/
+    --background-first:#E0DEE0;
+    --background-second: #0ad1ef ;
+
+    /**background color dark**/
+    --background-first-dark: #31004a;
+    --background-second-dark: #33007b ;
+    /**color main light**/
+    --color-main: #E1C97C ;
+/**color main dark**/
+    --color-main-dark:red;
+/**color text light**/
+--color-text:white;
+/**color text dark**/
+--color-text-dark:green;
+/**color wave light**/
+--color-wave:white;
+/**color wave dark**/
+--color-wave-dark:green;
+  /** sunny side **/
+  --blue-border: #72cce3;
+  --blue-color: #E0DEE0 ;
+  --yellow-background: #fffaa8;
+  --yellow-border: #f5eb71;
+  /** dark side **/
+  --indigo-border: #5d6baa;
+  --indigo-color: #31004a;
+  --gray-border: #e8e8ea;
+  --gray-dots: #e8e8ea;
+  /** general **/
+  --white: #fff;
+}
 body{
 height:100%;
 width:100%;
-background-image: linear-gradient(135deg in oklab, #E0DEE0 0%, #0ad1ef 100%);
+background-image: linear-gradient(135deg in oklab, var(--background-first) 0%, var(--background-second) 100%);
 overflow:hidden;
+ -webkit-user-select: none; /* Safari */
+  -ms-user-select: none;     /* IE 10 and IE Mobile */
+  user-select: none;
 }
 #main{
 position: absolute;
@@ -12,9 +48,9 @@ z-index:100000;
 
   top: 10%;
   left: 15%;
-  background-color: #E1C97C;
+  background-color:var(--color-main) ;
   border-radius: 25px 25px 0 0;
-  box-shadow: #D5BD8B 0px 1px 70px, #D5BD8B 0px 0px 0px 5px;
+  box-shadow: var(--color-main)  0px 1px 70px, var(--color-main)  0px 0px 0px 5px;
   overflow: hidden;
   opacity:90%;
 }
@@ -36,11 +72,11 @@ display: flex;
     padding:0px;
 }
 h1{
-color:white;
+color:var(--color-text);
 }
 a{
 text-decoration:none;
-color:white;
+color:var(--color-text);
 }
  #bubbleCanvas {
       position: fixed;
@@ -65,7 +101,7 @@ padding:0;
 .wave-bar {
   width: 3px;
   height: 15px;
-  background-color: white;
+  background-color: var(--color-wave);
   border-radius: 2px;
   /* transform-origin: bottom; */
   animation: bounce ease-in-out infinite alternate;
@@ -80,12 +116,12 @@ display:none;
 
 }
 #audio_button {
-    box-shadow: 0px -6px 10px rgba(255, 255, 255, 1),
-        0px 4px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px -6px 10px var(--color-wave),
+        0px 4px 15px var(--color-wave);
     transition: 0.5s;
     padding: 13px 13px;
     border: none;
-    background-color: #f2f2f2;
+    background-color: var(--color-wave);
     border-radius: 0.5em;
     letter-spacing: 1px;
     text-align: center;
@@ -123,6 +159,171 @@ display:none;
     text-shadow: none;
 }
 p{
-color:white;
+color:var(--color-text);
 
 }
+.toggle--checkbox {
+  display: none;
+}
+
+.toggle--label {
+  width: 150px;
+  height: 70px;
+  background: var(--blue-color);
+  border-radius: 100px;
+  border: 5px solid var(--blue-border);
+  display: flex;
+  position:absolute;
+  transition: all 350ms ease-in;
+  bottom: 3vh;
+  left: 3vh;
+}
+.toggle--label:before {
+  animation-name: reverse;
+  animation-duration: 350ms;
+  animation-fill-mode: forwards;
+  transition: all 350ms ease-in;
+  content: '';
+  width: 54px;
+  height: 54px;
+  border: 5px solid var(--yellow-border);
+  top: 4px;
+  left: 4px;
+  position: absolute;
+  border-radius: 82px;
+  background: var(--yellow-background);
+}
+
+@keyframes reverse {
+  0% {
+    left: 104px;
+    width: 82px;
+  }
+  60% {
+    left: 72px;
+    width: 112px;
+  }
+  100% {
+    left: 4px;
+  }
+}
+
+.toggle--label-background {
+  width: 10px;
+  height: 5px;
+  border-radius: 5px;
+  position: relative;
+  background: var(--white);
+  left: 100px;
+  top: 30px;
+  transition: all 150ms ease-in;
+}
+.toggle--label-background:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  width: 40px;
+  height: 5px;
+  border-radius: 5px;
+  background: var(--white);
+  left: -20px;
+  transition: all 150ms ease-in;
+}
+.toggle--label-background:after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  width: 40px;
+  height: 5px;
+  border-radius: 5px;
+  background: var(--white);
+  left: -10px;
+  transition: all 150ms ease-in;
+}
+
+.toggle--checkbox:checked ~ .background {
+  background: var(--indigo-background);
+}
+.toggle--checkbox:checked + .toggle--label {
+  background: var(--indigo-color);
+  border-color: var(--indigo-border);
+}
+.toggle--checkbox:checked + .toggle--label:before {
+  background: var(--white);
+  border-color: var(--gray-border);
+  animation-name: switch;
+  animation-duration: 350ms;
+  animation-fill-mode: forwards;
+}
+@keyframes switch {
+  0% {
+    left: 4px;
+  }
+  60% {
+    left: 4px;
+    width: 112px;
+  }
+  100% {
+    left: 84px;
+    width: 54px;
+  }
+}
+.toggle--label:after {
+  transition-delay: 0ms;
+  transition: all 250ms ease-in;
+  position: absolute;
+  content: '';
+  box-shadow: var(--gray-dots) -13px 0 0 2px, var(--gray-dots) -24px 14px 0 -2px;
+  left: 143px;
+  top: 23px;
+  width: 10px;
+  height: 10px;
+  background: transparent;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.toggle--checkbox:checked + .toggle--label:after {
+  transition-delay: 350ms;
+  opacity: 1;
+}
+.toggle--checkbox:checked + .toggle--label .toggle--label-background {
+  left: 60px;
+  width: 5px;
+}
+.toggle--checkbox:checked + .toggle--label .toggle--label-background:before {
+  width: 5px;
+  height: 5px;
+  top: -25px;
+}
+.toggle--checkbox:checked + .toggle--label .toggle--label-background:after {
+  width: 5px;
+  height: 5px;
+  left: -30px;
+  top: 20px;
+}
+body:has(.toggle--checkbox:checked) {
+  background-image: linear-gradient(135deg in oklab, var(--background-first-dark) 0%, var(--background-second-dark) 100%);
+  & #main {
+    background-color: var(--color-main-dark);
+    box-shadow: var(--color-main-dark) 0px 1px 70px, var(--color-main-dark) 0px 0px 0px 5px;
+ filter: opacity(80%);
+  }
+& p{
+color:var(--color-text-dark);
+}
+& h1{
+color:var(--color-text-dark);
+}
+& a{
+color:var(--color-text-dark);
+}
+& .wave-bar{
+background-color:var(--color-wave-dark);
+}
+& #audio_button{
+background-color:var(--color-wave-dark);
+box-shadow: 0px -6px 10px var(--color-wave-dark), 0px 4px 15px var(--color-wave-dark);
+}
+}
+

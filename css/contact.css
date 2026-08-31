@@ -1,99 +1,89 @@
-  html,body{
-background: #000000;
- width: 100%;
-            display:block;
-        }
-        section{
-          
-background: linear-gradient(127deg, red 70%,black 70%);
-  height: 100%;
-  width: 70%;
-  position: absolute;
-           
-           
+  
+  html,
+    body {
 
-        }
-.glass-card {
-  position: absolute;
-  top: calc(25vh + 30px);
-  left: calc(25vw + 30px);
-  height: calc(50vh - 30px);
-  width: calc(50vw - 30px);
-  background: rgba(2, 2, 2, 0.15);
+      --borderheight: -1;
+      height: 100%;
+      width: 100%;
+      z-index: var(--borderheight);
+      background-color: #000;
+      overflow:hidden;
+    }
 
-  border-radius: calc(40vh + 40vw - 45px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+    .class {display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  flex-flow: column wrap;
 
-  overflow: hidden;
-}
+          }
 
-.glass-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 0px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.8),
-    transparent
-  );
-}
+    #box {
 
-.glass-card::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0px;
-  height: 100%;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.8),
-    transparent,
-    rgba(255, 255, 255, 0.3)
-  );
+      width: 500px;
+      height: 65vh;
+      color: transparent;
 
-}
 
-.t::-webkit-file-upload-button {
-  visibility: hidden;
-}
-.t{
-  content: 'Select some files';
-  display: inline-block;
+    }
 
-  padding: 5px 8px;
-  outline: none;
-  white-space: nowrap;
+    .gradient-border {
+      --borderWidth: 3px;
 
-  cursor: pointer;
-  text-shadow: 1px 1px #fff;
-  font-weight: 700;
-  font-size: 10pt;
+      position: relative;
+      border-radius: var(--borderWidth);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-}
-.t:hover::before {
-  border-color: black;
-}
-.t:active::before {
-  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
-}
-#r{
-    position: relative;
-    top: 30%;
-    left: 15%;
-     height: calc(10vh - 25px);
-     background-color: transparent;
- width: 40%;
- border-radius: 25px;
- color: wheat;
- 
+    .gradient-border:after {
+      content: '';
+      position: absolute;
+      top: calc(-1 * var(--borderWidth));
+      left: calc(-1 * var(--borderWidth));
+      height: calc(100% + var(--borderWidth) * 2);
+      width: calc(100% + var(--borderWidth) * 2);
+      background: linear-gradient(60deg, #a33ea3, #4b0082, #0000ff, #1e0070, #dc143c, orange, #00ffff);
+      border-radius: 37px;
+      z-index: 1;
+      animation: animatedgradient 3s ease alternate infinite;
+      background-size: 300% 300%;
+      overflow: auto;
 
-}
-.t{
-  position: absolute;
-}
+    }
 
+
+    @keyframes animatedgradient {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    h1{
+position:inherit;
+color:crimson;
+letter-spacing:5px;
+font-size:50px;
+font-family:Adwaita Mono;
+    }
+    li{
+
+z-index:100000000000000;
+    }
+    a{
+color:white;
+text-decoration:none;
+font-size:30px;
+font-family:Adwaita Mono;
+word-spacing:3px;
+    }
