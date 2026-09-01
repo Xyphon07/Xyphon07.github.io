@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 git status
 git add .
-git commit -m "added new feature"
+read -r -p "enter the commit  message:" context
+git commit -m "$context"
 git push origin main
