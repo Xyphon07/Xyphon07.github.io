@@ -87,3 +87,28 @@ font-size:30px;
 font-family:Adwaita Mono;
 word-spacing:3px;
     }
+    ul{
+margin-top:45px;
+
+    }
+    .gradient-border::before {
+  content: '';
+  position: absolute;
+  top: calc(0 * var(--borderWidth));
+  left: calc(0 * var(--borderWidth));
+  height: calc(99% + var(--borderWidth) * 2);
+  width: calc(99% + var(--borderWidth) * 2);
+  background: black;
+
+    background-size: auto;
+
+  background-size: auto;
+  border-radius: 37px;
+
+  z-index: 2;
+  animation: animatedgradient 3s ease alternate infinite;
+
+  background-size: 300% 300%;
+  overflow: auto;
+
+}
