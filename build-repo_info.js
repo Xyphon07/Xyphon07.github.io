@@ -8,7 +8,7 @@ async function buildDatabase() {
     console.log(`Contacting GitHub API for user: ${username}...`);
     
  
-    const response = await fetch(`https://github.com{username}/repos`);
+    const response = await fetch(`https://github.com/${username}/repos`);
     const repos = await response.json();
     
     if (!Array.isArray(repos)) {
