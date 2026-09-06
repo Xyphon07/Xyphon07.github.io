@@ -44,7 +44,7 @@ async function buildDatabase() {
       });
     }
 
-    fs.writeFileSync('./repo-info.json', JSON.stringify(portfolioList, null, 2));
+    fs.writeFileSync('./portfolio.json', JSON.stringify(portfolioList, null, 2));
     console.log(`  Created portfolio.json containing ${portfolioList.length} items.`);
 
   } catch (error) {
