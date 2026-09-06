@@ -1,0 +1,33 @@
+name: Auto Generate Portfolio JSON
+
+on:
+  push:
+    branches:
+      - main 
+  schedule:
+    - cron: '0 0 * * *' 
+jobs:
+  run-generator:
+    runs-on: ubuntu-latest # Launches a temporary Linux virtual machine
+
+    permissions:
+      contents: write # Grants the virtual machine permission to save the JSON file to your repo
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run Generator Script
+        run: node build-portfolio.js
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@://github.com"
+          git add portfolio.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: automated update of portfolio.json" && git push)
+

@@ -3,6 +3,8 @@ blog-content---
        music-12-04-2026.html
        dsa-12-04-2026.html
        maths-12-04-2026.html
+       programming=c-12-04-2026.html
+
   i only need to add blog to blog content foder in this format [date-category.html]
   a script will used in blog content all which check for date and title of blog it will put then date: and title inside blogcontent-all.html as
   link
