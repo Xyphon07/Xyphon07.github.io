@@ -21,7 +21,7 @@ jobs:
           node-version: '20'
 
       - name: Run Generator Script
-        run: node build-portfolio.js
+        run: node build-repo_info.js
 
       - name: Commit and Push Changes
         run: |
