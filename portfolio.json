@@ -1,0 +1,120 @@
+[
+  {
+    "name": "ANALOGCLOCK",
+    "description": "ANALOG CLOCK IN C",
+    "url": "https://github.com/Xyphon07/ANALOGCLOCK",
+    "languages": {
+      "C": "100.0%"
+    },
+    "stars": 0
+  },
+  {
+    "name": "Binaryclock",
+    "description": "No description written yet.",
+    "url": "https://github.com/Xyphon07/Binaryclock",
+    "languages": {
+      "C": "100.0%"
+    },
+    "stars": 0
+  },
+  {
+    "name": "fibonacci_clock",
+    "description": "No description written yet.",
+    "url": "https://github.com/Xyphon07/fibonacci_clock",
+    "languages": {
+      "C": "100.0%"
+    },
+    "stars": 0
+  },
+  {
+    "name": "GAMES",
+    "description": "No description written yet.",
+    "url": "https://github.com/Xyphon07/GAMES",
+    "languages": {
+      "Python": "100.0%"
+    },
+    "stars": 0
+  },
+  {
+    "name": "Leetcode_Ans",
+    "description": "MY LEETCODE ANSWERS ",
+    "url": "https://github.com/Xyphon07/Leetcode_Ans",
+    "languages": {
+      "C": "100.0%"
+    },
+    "stars": 0
+  },
+  {
+    "name": "my-.vimrc-config-",
+    "description": "No description written yet.",
+    "url": "https://github.com/Xyphon07/my-.vimrc-config-",
+    "languages": {
+      "Vim Script": "88.7%",
+      "HTML": "8.3%",
+      "C": "3.0%"
+    },
+    "stars": 0
+  },
+  {
+    "name": "my_cses_problem_set_answers",
+    "description": "No description written yet.",
+    "url": "https://github.com/Xyphon07/my_cses_problem_set_answers",
+    "languages": {
+      "C": "100.0%"
+    },
+    "stars": 0
+  },
+  {
+    "name": "personal_web",
+    "description": "code for my portfolio website",
+    "url": "https://github.com/Xyphon07/personal_web",
+    "languages": {
+      "CSS": "71.6%",
+      "HTML": "28.4%"
+    },
+    "stars": 0
+  },
+  {
+    "name": "p_html",
+    "description": "No description written yet.",
+    "url": "https://github.com/Xyphon07/p_html",
+    "languages": {
+      "Shell": "55.1%",
+      "HTML": "27.8%",
+      "CSS": "15.7%",
+      "JavaScript": "1.4%"
+    },
+    "stars": 0
+  },
+  {
+    "name": "repo",
+    "description": "my pure Html css projects",
+    "url": "https://github.com/Xyphon07/repo",
+    "languages": {
+      "HTML": "91.4%",
+      "CSS": "8.6%"
+    },
+    "stars": 1
+  },
+  {
+    "name": "vim_theme",
+    "description": "vim theme i created",
+    "url": "https://github.com/Xyphon07/vim_theme",
+    "languages": {
+      "Vim Script": "100.0%"
+    },
+    "stars": 0
+  },
+  {
+    "name": "Xyphon07.github.io",
+    "description": "No description written yet.",
+    "url": "https://github.com/Xyphon07/Xyphon07.github.io",
+    "languages": {
+      "CSS": "40.0%",
+      "HTML": "40.0%",
+      "JavaScript": "19.7%",
+      "Shell": "0.4%"
+    },
+    "stars": 0
+  }
+]
