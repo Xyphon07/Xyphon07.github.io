@@ -14,14 +14,36 @@ background: #000000;
 display: flex;
   flex-flow: column;
   align-items: center;
-
+  position: absolute;
+  width: 100%;
+  top: 10%;
 
         }
+        header{
+            position: fixed;
+  top: 0%;
+  width: 100%;
+  z-index: 1111;
+  height: 10%;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  display: flex;
+  background: wheat;
+  }
+  header > a{
+position:relative;
+color:black;
+text-decoration:none;
+
+
+
+  }
 .glass-card {
 position: relative;
   height: 300px;
-  width: 50vw;
-  background: rgba(2, 2, 2, 0.15);
+  width: 90vw;
+  background: rgba(2, 2, 2, 0.7);
   border-radius: 70px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   overflow: hidden;

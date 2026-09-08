@@ -44,21 +44,22 @@ overflow:hidden;
 position: absolute;
   height: 90%;
   width: 70%;
-z-index:100000;
-
+  z-index: 100000;
   top: 10%;
   left: 15%;
-  background-color:var(--color-main) ;
+  background-color: var(--color-main);
   border-radius: 25px 25px 0 0;
-  box-shadow: var(--color-main)  0px 1px 70px, var(--color-main)  0px 0px 0px 5px;
+  box-shadow: var(--color-main) 0px 1px 70px, var(--color-main) 0px 0px 0px 5px;
   overflow: hidden;
-  opacity:90%;
+  opacity: 90%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
 }
+
 #main > img{
 height: 10vw;
   width: 10vw;
-  left: 30vw;
-  position: relative;
   }
 #main > li{
 display: flex;
@@ -66,6 +67,7 @@ display: flex;
   margin:0px;
   padding:0px;
   justify-content: space-evenly;
+  width:90%;
 }
 #main >li>ul{
     margin:0px;
@@ -176,7 +178,6 @@ color:var(--color-text);
   position:absolute;
   transition: all 350ms ease-in;
   bottom: 3vh;
-  left: 3vh;
 }
 .toggle--label:before {
   animation-name: reverse;
