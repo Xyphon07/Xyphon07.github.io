@@ -18,6 +18,13 @@
     "stars": 0
   },
   {
+    "name": "blog_ide",
+    "description": "No description written yet.",
+    "url": "https://github.com/Xyphon07/blog_ide",
+    "languages": {},
+    "stars": 0
+  },
+  {
     "name": "fibonacci_clock",
     "description": "No description written yet.",
     "url": "https://github.com/Xyphon07/fibonacci_clock",
@@ -110,9 +117,9 @@
     "description": "No description written yet.",
     "url": "https://github.com/Xyphon07/Xyphon07.github.io",
     "languages": {
-      "CSS": "39.3%",
-      "HTML": "38.6%",
-      "JavaScript": "21.7%",
+      "CSS": "40.3%",
+      "HTML": "35.8%",
+      "JavaScript": "23.6%",
       "Shell": "0.4%"
     },
     "stars": 0
