@@ -104,6 +104,15 @@
     "stars": 1
   },
   {
+    "name": "todolog",
+    "description": "No description written yet.",
+    "url": "https://github.com/Xyphon07/todolog",
+    "languages": {
+      "Rust": "100.0%"
+    },
+    "stars": 0
+  },
+  {
     "name": "vim_theme",
     "description": "vim theme i created",
     "url": "https://github.com/Xyphon07/vim_theme",
