@@ -34,6 +34,15 @@
     "stars": 0
   },
   {
+    "name": "fractal",
+    "description": "No description written yet.",
+    "url": "https://github.com/Xyphon07/fractal",
+    "languages": {
+      "C": "100.0%"
+    },
+    "stars": 0
+  },
+  {
     "name": "GAMES",
     "description": "No description written yet.",
     "url": "https://github.com/Xyphon07/GAMES",
@@ -119,15 +128,6 @@
       "CSS": "8.6%"
     },
     "stars": 1
-  },
-  {
-    "name": "Sierpinski_triangle",
-    "description": "No description written yet.",
-    "url": "https://github.com/Xyphon07/Sierpinski_triangle",
-    "languages": {
-      "C": "100.0%"
-    },
-    "stars": 0
   },
   {
     "name": "todolog",
